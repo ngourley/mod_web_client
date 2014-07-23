@@ -1,0 +1,32 @@
+{
+  "name": "mod_web_client",
+  "version": "0.1.0",
+  "description": "Breach module work in progress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ngourley@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.5.0",
+    "breach_module": "^0.3.20-alpha.5",
+    "express": "^4.6.1",
+    "jade": "^1.4.2",
+    "method-override": "^2.1.1",
+    "request": "^2.38.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.6",
+    "gulp-bower": "0.0.6",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.3.3",
+    "gulp-jshint": "^1.7.1",
+    "gulp-minify-css": "^0.3.7",
+    "gulp-nodemon": "^1.0.4",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^0.3.1",
+    "gulp-util": "^3.0.0",
+    "jshint-stylish": "^0.4.0"
+  }
+}
