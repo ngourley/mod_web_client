@@ -15,7 +15,8 @@
     "express": "^4.6.1",
     "jade": "^1.4.2",
     "method-override": "^2.1.1",
-    "request": "^2.38.0"
+    "request": "^2.38.0",
+    "debug": "^1.0.4"
   },
   "devDependencies": {
     "gulp": "^3.8.6",
