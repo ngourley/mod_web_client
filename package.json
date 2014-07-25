@@ -4,8 +4,7 @@
   "description": "Breach module work in progress",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "rm -rf node_modules"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ngourley@gmail.com",
   "license": "MIT",
@@ -17,18 +16,5 @@
     "jade": "^1.5.0",
     "method-override": "1.0.x",
     "request": "2.36.x"
-  },
-  "devDependencies": {
-    "gulp": "^3.8.6",
-    "gulp-bower": "0.0.6",
-    "gulp-clean": "^0.3.1",
-    "gulp-concat": "^2.3.3",
-    "gulp-jshint": "^1.7.1",
-    "gulp-minify-css": "^0.3.7",
-    "gulp-nodemon": "^1.0.4",
-    "gulp-rename": "^1.2.0",
-    "gulp-uglify": "^0.3.1",
-    "gulp-util": "^3.0.0",
-    "jshint-stylish": "^0.4.0"
   }
 }
