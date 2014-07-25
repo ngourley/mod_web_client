@@ -9,10 +9,11 @@
   "author": "ngourley@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "breach_module": "0.3.x",
     "async": "0.9.x",
-    "express": "4.0.x",
     "body-parser": "1.0.x",
+    "breach_module": "0.3.x",
+    "express": "4.0.x",
+    "jade": "^1.5.0",
     "method-override": "1.0.x",
     "request": "2.36.x"
   },
