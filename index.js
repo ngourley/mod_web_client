@@ -1,47 +1,54 @@
-var   path              = require('path')
-    , http              = require('http')
-    , express           = require('express')
-    , methodOverride    = require('method-override')
-    , bodyParser        = require('body-parser')
-    , request           = require('request')
-    , async             = require('async')
-    , breach            = require('breach_module');
+/*
+ * Breach: [mod_web_client] index.js
+ * Author: ngourley@gmail.com
+ */
+"use strict"
 
-process.on('uncaughtException', function (err) {
-    console.error(err);
-});
+var express = require('express');
+var http = require('http');
+var path = require('path');
+var async = require('async');
+var breach = require('breach_module');
 
-var bootstrap = function (port) {
-    breach.init(function () {
-        breach.expose('init', function (src, args, callback) {
-            breach.module('core').call(
-                'tabs_new_tab_url',
-                { url: 'http://localhost:' + port + '/web_client'},
-                function (err) {
-                    console.error(err);
-                }
-            );
-            return callback();
-        });
-
-        breach.expose('kill', function (args, callback) {
-            console.log('Application killed');
-            return callback();
-        });
-
+/******************************************************************************/
+/* MODULE BOOTSTRAP */
+/******************************************************************************/
+var bootstrap = function(port) {
+  breach.init(function(cb_) {
+    breach.register('core', 'inst:.*');
+  
+      breach.expose('init', function (src, args, callback) {
+          breach.module('core').call(
+              'tabs_new_tab_url',
+              { url: 'http://localhost:' + port + '/web_client'},
+              function (err) {
+                  console.error(err);
+              }
+          );
+          return callback();
+      });
+  
+    breach.expose('kill', function(args, cb_) {
+        process.exit(0);
     });
+
+    console.log('Exposed: `http://127.0.0.1:' + port + '/newtab`');
+  });
 };
 
+/******************************************************************************/
+/* SETUP */
+/******************************************************************************/
 (function setup() {
-
     var app = express();
     var server = http.createServer(app).listen(0, '127.0.0.1');
 
     app.set('views', path.join(__dirname, 'views'));
     app.set('view engine', 'jade');
 
-    app.use(bodyParser());
-    app.use(methodOverride());
+    app.use(require('body-parser')());
+    app.use(require('method-override')())
+    
     app.use(express.static(path.join(__dirname, 'public')));
 
     app.get('/web_client', function (req, res) {
