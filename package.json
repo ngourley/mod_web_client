@@ -4,7 +4,8 @@
   "description": "Breach module work in progress",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "rm -rf node_modules && npm install"
   },
   "author": "ngourley@gmail.com",
   "license": "MIT",
