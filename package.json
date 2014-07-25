@@ -9,17 +9,16 @@
   "author": "ngourley@gmail.com",
   "license": "MIT",
   "dependencies": {
+    "npm": "^1.4.21",
+    "npm-local-cache": "^0.1.2",
+    "npm-normalize": "^0.2.3",
     "body-parser": "^1.5.0",
     "breach_module": "^0.3.20-alpha.5",
     "depd": "^0.4.2",
     "express": "4.0.x",
     "jade": "^1.4.2",
     "method-override": "^2.1.1",
-    "request": "^2.38.0",
-    "debug": "1.0.3",
-    "npm": "^1.4.21",
-    "npm-local-cache": "^0.1.2",
-    "npm-normalize": "^0.2.3"
+    "request": "^2.38.0"
   },
   "devDependencies": {
     "gulp": "^3.8.6",
