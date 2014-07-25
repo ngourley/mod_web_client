@@ -1,10 +1,11 @@
-var   breach            = require('breach_module')
-    , path              = require('path')
+var   path              = require('path')
     , http              = require('http')
     , express           = require('express')
     , methodOverride    = require('method-override')
     , bodyParser        = require('body-parser')
-    , request           = require('request');
+    , request           = require('request')
+    , async             = require('async')
+    , breach            = require('breach_module');
 
 process.on('uncaughtException', function (err) {
     console.error(err);
